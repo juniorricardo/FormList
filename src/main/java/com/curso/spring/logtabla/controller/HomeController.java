@@ -25,18 +25,21 @@ public class HomeController {
 	
 	@PostMapping("/nuevo")
 	public String setRegistro(@ModelAttribute Usuario usuario ,Model modelo) {
-//		
-//		for (Usuario index : miRegistro.getRegistro()) {
-//			if(index.getNombre() == usuario.getNombre() && )
-//		}
-		miRegistro.setRegistro(usuario);
-		modelo.addAttribute("listUsuarios", miRegistro.getRegistro());
+		
+		if(!miRegistro.existe(usuario)) {
+			miRegistro.setRegistro(usuario);
+			modelo.addAttribute("listUsuarios", miRegistro.getRegistroLista());
+			modelo.addAttribute("estado", "Usuario registrado");
+		}else {
+			modelo.addAttribute("listUsuarios", miRegistro.getRegistroLista());
+			modelo.addAttribute("estado", "El usuario existe");
+		}
 		return "lista";
 	}
 	
 	@GetMapping("/lista")
 	public String getLista(Model modelo) {
-		modelo.addAttribute("listUsuarios", miRegistro.getRegistro());
+		modelo.addAttribute("listUsuarios", miRegistro.getRegistroLista());
 		return "lista";
 	}
 	
