@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registro!</title>
+</head>
+
+<body>
+	
+	<h1>Holaaa</h1>
+	<form th:action="@{/nuevo}" th:object="${registro}" method="post">
+		<div>
+			<input th:field="*{nombre}" placeholder="Nombre">
+			<input th:field="*{pass}" placeholder="pass">
+			<button class="submit">enviar</button>
+		</div>
+	</form>
+
+</body>
+
+</html>
