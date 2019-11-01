@@ -2,19 +2,73 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Registro!</title>
+
+	<title>Registro!</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+
+	<link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
+
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+		integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<style>
+		body {
+			background-color: #3498db;
+			font-family: Arial, sans-serif;
+			padding: 50px
+		}
+
+		.container {
+			margin: 20px auto;
+			padding: 10px;
+			width: 500px;
+			height: auto;
+			background-color: #fff;
+			border-radius: 5px
+		}
+
+		form {
+			text-align: center
+		}
+
+		input {
+			padding: 12px 0;
+			margin-bottom: 10px;
+			border-radius: 3px;
+			border: 2px solid transparent;
+			text-align: center;
+			width: 90%;
+			font-size: 16px;
+			transition: border .2s, background-color .2s
+		}
+	</style>
 </head>
 
 <body>
-	
-	<h1>Holaaa</h1>
+
+
 	<form th:action="@{/nuevo}" th:object="${registro}" method="post">
-		<div>
-			<input th:field="*{nombre}" placeholder="Nombre">
-			<input th:field="*{pass}" placeholder="pass">
-			<button class="submit">enviar</button>
+		<div class="container control">
+			<h1 class="title">Registrar usuario</h1>
+			<div class="row">
+				<div class="input-control form-group col-12">
+					<input class="input" type="text" th:field="*{nombre}" placeholder="Nombre">
+					<input class="input" type="text" th:field="*{pass}" placeholder="Contraseña">
+				</div>
+
+				<div class="form-group btn-group btn-group-fill col-12">
+					<button type="submit" class="btn btn-dark">Crear <i class="fas fa-paper-plane"></i></button>
+					<button type="reset" class="btn btn-secondary">Limpiar <i class="fas fa-eraser"></i></button>
+				</div>
+			</div>
 		</div>
 	</form>
 

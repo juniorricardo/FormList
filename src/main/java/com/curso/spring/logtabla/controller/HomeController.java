@@ -17,7 +17,7 @@ public class HomeController {
 	@Autowired
 	private RegistroServicie miRegistro;
 	
-	@GetMapping("/nuevo")
+	@GetMapping({"/nuevo","/"})
 	public String logForm(Model modelo) {
 		modelo.addAttribute("registro", new Usuario());
 		return "nuevo";
