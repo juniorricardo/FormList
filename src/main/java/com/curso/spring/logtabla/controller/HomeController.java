@@ -41,13 +41,6 @@ public class HomeController {
 	public String getLista(Model modelo) {
 		modelo.addAttribute("listUsuarios", miRegistro.getRegistroLista());
 		return "lista";
-	}
-	
-//	@PostMapping("/lista")
-//	public String cargar() {
-//		
-//	}
-	
-	
+	}	
 	
 }
