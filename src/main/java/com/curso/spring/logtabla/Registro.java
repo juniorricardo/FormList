@@ -3,6 +3,14 @@ package com.curso.spring.logtabla;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * 
+ * @author Cina
+ *
+ *	Esta clase contendra los datos de los registros y mostrarlos, tambien permite agregar
+ *	mas resgistros
+ */
+
 public class Registro {
 	
 	
