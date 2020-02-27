@@ -29,7 +29,7 @@
 	crossorigin="anonymous"></script>
 <style>
 body {
-	background-color: #3498db;
+	background-color: #2D294E;
 	font-family: Arial, sans-serif;
 	padding: 50px
 }
@@ -62,21 +62,20 @@ input {
 
 <body>
 
-
 	<form th:action="@{/nuevo}" th:object="${registro}" method="post">
 		<div class="container control">
 			<h1 class="title">Log in</h1>
 			<div class="row">
 				<div class="input-control form-group col-12">
 					<input class="input" type="text" th:field="*{nombre}"
-						placeholder="Nombre" required="required"> <input
-						class="input" type="text" th:field="*{pass}"
+						placeholder="Nombre" required="required">
+					<input class="input" type="password" th:field="*{pass}"
 						placeholder="Contraseña">
 				</div>
 
 				<div class="form-group btn-group btn-group-fill col-12">
 					<button type="submit" class="btn btn-dark">
-						Crear<i class="fas fa-paper-plane"></i>
+						Agregar<i class="fas fa-paper-plane"></i>
 					</button>
 					<button type="reset" class="btn btn-secondary">
 						Limpiar<i class="fas fa-eraser"></i>

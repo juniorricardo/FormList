@@ -29,7 +29,7 @@
 	crossorigin="anonymous"></script>
 <style>
 body {
-	background-color: #3498db;
+	background-color: #2D294E;
 	font-family: Arial, sans-serif;
 	padding: 50px
 }
@@ -62,15 +62,14 @@ input {
 
 <body>
 
-
 	<form th:action="@{/nuevo}" th:object="${registro}" method="post">
 		<div class="container control">
 			<h1 class="title">Log in</h1>
 			<div class="row">
 				<div class="input-control form-group col-12">
 					<input class="input" type="text" th:field="*{nombre}"
-						placeholder="Nombre" required="required"> <input
-						class="input" type="text" th:field="*{pass}"
+						placeholder="Nombre" required="required">
+					<input class="input" type="password" th:field="*{pass}"
 						placeholder="Contraseña">
 				</div>
 
